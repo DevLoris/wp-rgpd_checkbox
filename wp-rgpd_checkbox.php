@@ -23,10 +23,8 @@ function script_rgpdcheckbox(){
     ?>
     <script>
         document.addEventListener('DOMContentLoaded', function(){
-            console.log('testttt <?php echo $optionsRGPD['js_selector']; ?>');
             var $forms = document.querySelectorAll('<?php echo $optionsRGPD['js_selector']; ?>');
             $forms.forEach(function (element) {
-                console.log(element);
                 var $checkbox = document.createElement('label');
                 $checkbox.classList.add('rgpd');
                 $checkbox.innerHTML = '<input type="checkbox" name="rgpd"> <?php echo $optionsRGPD['text']; ?> <a href="<?php echo $optionsRGPD['policyurl']; ?>" target="_blank"><?php echo $optionsRGPD['link_text']; ?></a>';
@@ -39,8 +37,6 @@ function script_rgpdcheckbox(){
                         event.preventDefault();
                     }
                 });
-
-                console.log($checkbox);
             });
         }, false);
     </script>
@@ -67,7 +63,7 @@ function rgpd_settings_init(  ) {
     );
     add_settings_field(
         'js_selector',
-        __( 'Selecteur', 'rgpd' ),
+        __( 'Selecteur CSS / JS', 'rgpd' ),
         'js_selector_render',
         'pluginPage',
         'rgpd_pluginPage_section'
