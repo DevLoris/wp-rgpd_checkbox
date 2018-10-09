@@ -1,4 +1,5 @@
-#Plugin WP Checkbox RGPD 
+# Plugin WP Checkbox RGPD 
+
 Ce plugin ajoute à la volée des checkbox. 
 4 petites configurations. 
 
